@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="container">
+        <h2 class="container-heading">Heart Disease Prediction Result</h2>
+        <p class="description">Based on the information you provided, here is the result of your heart disease risk prediction:</p>
+    </div>
+
+    <!-- Place the copyright here instead of the footer -->
+    <div class="copyright">
+        <p>&copy; 2024 Heart Disease Prediction</p>
+    </div>
+
+    <!-- Result Display -->
+    <div class="result-container">
+        <h3>Prediction Result:</h3>
+        <p>
+            {% if result == "High risk" %}
+                <span class="result-bad">You have a high risk of heart disease.</span>
+            {% else %}
+                <span class="result-good">You have a low risk of heart disease.</span>
+            {% endif %}
+        </p>
+
+        <h4>Details:</h4>
+        <ul>
+            <li><strong>Age:</strong> {{ age }} years</li>
+            <li><strong>Sex:</strong> {% if sex == "1" %}Male{% else %}Female{% endif %}</li>
+            <li><strong>Education Level:</strong> {{ education }}</li>
+            <li><strong>Current Smoker:</strong> {{ currentSmoker }}</li>
+            <li><strong>Cigarettes Per Day:</strong> {{ cigsPerDay }}</li>
+            <li><strong>Blood Pressure Medication:</strong> {{BPMeds}}</li>
+            <li><strong>Prevalent Stroke:</strong>{{ prevalentStroke }}</li>
+            <li><strong>Prevalent Hypertension:</strong> {{prevalentHyp}}</li>
+            <li><strong>Diabetes:</strong> {{diabetes}}</li>
+            <li><strong>Total Cholesterol:</strong> {{ totChol }} mg/dL</li>
+            <li><strong>Systolic BP:</strong> {{ sysBP }} mmHg</li>
+            <li><strong>Diastolic BP:</strong> {{ diaBP }} mmHg</li>
+            <li><strong>BMI:</strong> {{ BMI }} kg/m²</li>
+            <li><strong>Heart Rate:</strong> {{ heartRate }} bpm</li>
+            <li><strong>Glucose Level:</strong> {{ glucose }} mg/dL</li>
+        </ul>
+
+        <br>
+        <a href="{{ url_for('index') }}" class="my-cta-button">Back to Home</a>
+    </div>
+
+    <!-- Footer Section (Optional, can be removed if copyright is moved) -->
+    <!-- <div class="footer">
+        <p>&copy; 2024 Heart Disease Prediction</p>
+    </div> -->
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class='container-heading'><span class="heading_font">Heart Disease Predictor</span></h2>
+    <div class='description'>
+      <p>A Machine Learning Web Application that predict whether the patient has 10-year risk of future coronary heart disease (CHD). 
+ Built with Flask.</p><br>
+        <p>(Note:This model is 85.43% accurate)</p>
+    </div>
+  </div>
+  
+  
+<div class="ml-container">
+    <form action="{{ url_for('predict') }}" method="POST">
+       <!-- Sex -->
+<label for="sex">Sex</label>
+<select id="sex" name="sex" required>
+    <option value="1">Male</option>
+    <option value="0">Female</option>
+</select><br>
+
+        <!-- Age -->
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" placeholder="Your age in years" required><br>
+
+        <!-- Education -->
+        <label for="education">Education</label>
+        <input type="number" id="education" name="education" min="1" max="4" placeholder="Level (1 to 4)" required><br>
+
+        <!-- Current Smoker -->
+        <label for="currentSmoker">Current Smoker</label>
+        <select id="currentSmoker" name="currentSmoker" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <!-- Cigarettes Per Day -->
+        <label for="cigsPerDay">Cigarettes Per Day</label>
+        <input type="number" id="cigsPerDay" name="cigsPerDay" min="0" max="200" placeholder="Number of cigarettes" required><br>
+
+        <!-- Blood Pressure Medication -->
+        <label for="BPMeds">Blood Pressure Medication</label>
+        <select id="BPMeds" name="BPMeds" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <!-- Prevalent Stroke -->
+        <label for="prevalentStroke">Prevalent Stroke</label>
+        <select id="prevalentStroke" name="prevalentStroke" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <!-- Prevalent Hypertension -->
+        <label for="prevalentHyp">Prevalent Hypertension</label>
+        <select id="prevalentHyp" name="prevalentHyp" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <!-- Diabetes -->
+        <label for="diabetes">Diabetes</label>
+        <select id="diabetes" name="diabetes" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <!-- Total Cholesterol -->
+        <label for="totChol">Total Cholesterol (mg/dL)</label>
+        <input type="number" id="totChol" name="totChol" min="0" placeholder="Cholesterol level" required><br>
+
+        <!-- Systolic Blood Pressure -->
+        <label for="sysBP">Systolic Blood Pressure (mmHg)</label>
+        <input type="number" id="sysBP" name="sysBP" min="0" max="250" placeholder="Systolic BP" required><br>
+
+        <!-- Diastolic Blood Pressure -->
+        <label for="diaBP">Diastolic Blood Pressure (mmHg)</label>
+        <input type="number" id="diaBP" name="diaBP" min="0" max="150" placeholder="Diastolic BP" required><br>
+
+        <!-- BMI -->
+        <label for="BMI">Body Mass Index (BMI)</label>
+        <input type="number" step="0.1" id="BMI" name="BMI" placeholder="BMI value" required><br>
+
+        <!-- Heart Rate -->
+        <label for="heartRate">Heart Rate (bpm)</label>
+        <input type="number" id="heartRate" name="heartRate" min="30" max="200" placeholder="Heart Rate" required><br>
+
+        <!-- Glucose Level -->
+        <label for="glucose">Glucose Level (mg/dL)</label>
+        <input type="number" id="glucose" name="glucose" min="0" max="500" placeholder="Glucose level" required><br>
+
+        <!-- Submit Button -->
+        <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+</div>
+ 
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Made by Motasem Alatawna</p>
+    </div>
+
+</body>
+</html>

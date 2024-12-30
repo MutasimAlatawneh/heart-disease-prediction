@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body and Main Styles */
+body {
+  background-color: #f4f7fa;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.container-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2a9d8f;
+}
+
+.heading_font {
+  font-family: 'Georgia', serif;
+}
+
+.description {
+  font-size: 18px;
+  color: #555;
+}
+
+.ml-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #2a9d8f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #264e36;
+}
+
+.my-cta-button {
+  display: inline-block;
+  background-color: #264e36;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.my-cta-button:hover {
+  background-color: #2a9d8f;
+}
+
+/* Result Page Styles */
+.result-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.result-bad {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.result-good {
+  color: #2a9d8f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul li strong {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2a9d8f;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .container-heading {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  input, select {
+    padding: 8px;
+  }
+
+  input[type="submit"] {
+    padding: 12px;
+  }
+
+  .my-cta-button {
+    font-size: 16px;
+    padding: 8px 25px;
+  }
+
+  .result-container {
+    padding: 20px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-heading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  input, select {
+    padding: 8px;
+  }
+
+  input[type="submit"] {
+    padding: 14px;
+  }
+
+  .my-cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .result-container {
+    padding: 15px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
+}
+.copyright {
+    text-align: center; /* Center the text horizontally */
+    position: absolute; /* Position it at the bottom */
+    bottom: 0;
+    width: 100%; /* Ensure it spans the full width */
+    padding: 10px 0; /* Add some space above and below the text */
+    font-size: 14px; /* Adjust font size if needed */
+}
