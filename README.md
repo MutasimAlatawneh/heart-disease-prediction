@@ -2,8 +2,6 @@
 
 This project aims to predict whether a patient has a 10-year risk of developing Coronary Heart Disease (CHD). A simple, interactive web interface built with Flask allows users to input their medical information and receive real-time predictions powered by a Logistic Regression model.
 
-*(Note: Add your screenshot here using `![Web App UI](path/to/your/image.png)`)*
-
 ## 📊 Dataset & Features
 The model is trained on a dataset containing the following medical features:
 * **male:** Gender of the patient (binary)
